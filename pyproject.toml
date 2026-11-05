@@ -27,6 +27,15 @@ classifiers = [
 Homepage = "https://github.com/liriansu-opus/chinese-calendar"
 Changelog = "https://github.com/liriansu-opus/chinese-calendar/blob/master/CHANGELOG.md"
 
+[dependency-groups]
+dev = [
+    "black>=26.10.1",
+    "flake8>=7",
+    "isort>=6",
+    "pytest>=9.0.3",
+    "pytest-cov>=6",
+]
+
 [tool.setuptools]
 packages = ["chinese_calendar"]
 

@@ -53,10 +53,11 @@ assert chinese_calendar.is_in_lieu(datetime.date(2006, 2, 2)) is True
 
 ## 贡献代码
 
-1. Fork + Clone 项目到本地
+1. Fork + Clone 项目到本地，安装 [uv](https://docs.astral.sh/uv/) 后执行 `make install`
 2. 修改[节假日定义][scripts/data.py]
-3. 执行[脚本][scripts/__init__.py]自动生成[常量文件][constants.py]
-4. 提交PR
+3. 执行 `make fmt`，它会调用[脚本][scripts/__init__.py]自动生成[常量文件][constants.py]并格式化代码
+4. 执行 `make test` 确认检查和测试都通过
+5. 提交PR
 
 [constants.py]: https://github.com/liriansu-opus/chinese-calendar/blob/master/chinese_calendar/constants.py
 [scripts/data.py]: https://github.com/liriansu-opus/chinese-calendar/blob/master/chinese_calendar/scripts/data.py

@@ -53,10 +53,11 @@ you can translate the [constants file][constants.py] to get the complete chinese
 
 ## Contributing
 
-1. Fork & Clone this project
+1. Fork & Clone this project, install [uv](https://docs.astral.sh/uv/), then run `make install`
 2. Modify [calendar definition file][scripts/data.py]
-3. Run [script][scripts/__init__.py] to generate the [constants file][constants.py]
-4. Create a PR
+3. Run `make fmt`, which runs the [script][scripts/__init__.py] to generate the [constants file][constants.py] and formats the code
+4. Run `make test` to make sure lint and tests pass
+5. Create a PR
 
 [constants.py]: https://github.com/liriansu-opus/chinese-calendar/blob/master/chinese_calendar/constants.py
 [scripts/data.py]: https://github.com/liriansu-opus/chinese-calendar/blob/master/chinese_calendar/scripts/data.py
