@@ -1,4 +1,10 @@
-## Latest Version 1.11.0
+## Latest Version 1.12.0
+> on 2026-11-05
+
+* **FEAT**: 支持 2027年 的节假日
+  - 依据国务院公告，见 `https://www.gov.cn/zhengce/zhengceku/202611/content_7085102.htm`
+
+## Version 1.11.0
 > on 2025-11-04
 
 * **FEAT**: 支持 2026年 的节假日
