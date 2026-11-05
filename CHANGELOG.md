@@ -1,4 +1,5 @@
-## Unreleased
+## Latest Version 1.12.1
+> on 2026-11-05
 
 * **FEAT**: `get_holiday_detail` 新增 `in_english` 参数，传 `in_english=False` 可获取中文节日名，thanks @xjackzenvey
 * **CHORE**: 支持 Python 3.10 ~ 3.15，不再支持已经停止维护的 Python 3.8 和 3.9
@@ -6,10 +7,10 @@
 * **CHORE**: 打包改用 `pyproject.toml`，开发环境从 pipenv 换成 uv
   - wheel 标签由 `py2.py3` 改为 `py3`，并附带 LICENSE 文件
 
-## Latest Version 1.12.0
+## Version 1.12.0
 > on 2026-11-05
 
-* **FEAT**: 支持 2027年 的节假日
+* **FEAT**: 支持 2027年 的节假日，thanks @zeke-chin
   - 依据国务院公告，见 `https://www.gov.cn/zhengce/zhengceku/202611/content_7085102.htm`
 
 ## Version 1.11.0
