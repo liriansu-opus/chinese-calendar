@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# The same code is also published to PyPI as "chinese_calendar"; see `make build`.
+name = "chinesecalendar"
+dynamic = ["version"]
+description = "check if some day is holiday in China"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Lirian Su", email = "liriansu@gmail.com" }]
+requires-python = ">=3.10"
+dependencies = []
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
+]
+
+[project.urls]
+Homepage = "https://github.com/liriansu-opus/chinese-calendar"
+Changelog = "https://github.com/liriansu-opus/chinese-calendar/blob/master/CHANGELOG.md"
+
+[dependency-groups]
+dev = [
+    "black>=26.10.1",
+    "flake8>=7",
+    "isort>=6",
+    "pytest>=9.0.3",
+    "pytest-cov>=6",
+]
+
+[tool.setuptools]
+packages = ["chinese_calendar"]
+
+[tool.setuptools.dynamic]
+version = { attr = "chinese_calendar.__version__" }
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+addopts = "-s --cov=chinese_calendar"
+
+[tool.coverage.run]
+branch = true
+omit = ["tests/*"]

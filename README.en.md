@@ -1,12 +1,12 @@
 # Chinese Calendar
 
 [![Package](https://img.shields.io/pypi/v/chinesecalendar.svg)](https://pypi.python.org/pypi/chinesecalendar)
-[![Travis](https://img.shields.io/travis/LKI/chinese-calendar.svg)](https://travis-ci.org/LKI/chinese-calendar)
-[![License](https://img.shields.io/github/license/LKI/chinese-calendar.svg)](https://github.com/LKI/chinese-calendar/blob/master/LICENSE)
-[![README](https://img.shields.io/badge/简介-中文-brightgreen.svg)](https://github.com/LKI/chinese-calendar/blob/master/README.md)
+[![Travis](https://img.shields.io/travis/liriansu-opus/chinese-calendar.svg)](https://travis-ci.org/liriansu-opus/chinese-calendar)
+[![License](https://img.shields.io/github/license/liriansu-opus/chinese-calendar.svg)](https://github.com/liriansu-opus/chinese-calendar/blob/master/LICENSE)
+[![README](https://img.shields.io/badge/简介-中文-brightgreen.svg)](https://github.com/liriansu-opus/chinese-calendar/blob/master/README.md)
 
 Check if some date is workday or holiday in China.
-Support 2004 ~ 2025.
+Support 2004 ~ 2027.
 
 ## Installation
 
@@ -53,11 +53,12 @@ you can translate the [constants file][constants.py] to get the complete chinese
 
 ## Contributing
 
-1. Fork & Clone this project
+1. Fork & Clone this project, install [uv](https://docs.astral.sh/uv/), then run `make install`
 2. Modify [calendar definition file][scripts/data.py]
-3. Run [script][scripts/__init__.py] to generate the [constants file][constants.py]
-4. Create a PR
+3. Run `make fmt`, which runs the [script][scripts/__init__.py] to generate the [constants file][constants.py] and formats the code
+4. Run `make test` to make sure lint and tests pass
+5. Create a PR
 
-[constants.py]: https://github.com/LKI/chinese-calendar/blob/master/chinese_calendar/constants.py
-[scripts/data.py]: https://github.com/LKI/chinese-calendar/blob/master/chinese_calendar/scripts/data.py
-[scripts/__init__.py]: https://github.com/LKI/chinese-calendar/blob/master/chinese_calendar/scripts/__init__.py
+[constants.py]: https://github.com/liriansu-opus/chinese-calendar/blob/master/chinese_calendar/constants.py
+[scripts/data.py]: https://github.com/liriansu-opus/chinese-calendar/blob/master/chinese_calendar/scripts/data.py
+[scripts/__init__.py]: https://github.com/liriansu-opus/chinese-calendar/blob/master/chinese_calendar/scripts/__init__.py

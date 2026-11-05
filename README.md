@@ -1,12 +1,11 @@
 # 中国节假日
 
 [![Package](https://img.shields.io/pypi/v/chinesecalendar.svg)](https://pypi.python.org/pypi/chinesecalendar)
-[![Travis](https://img.shields.io/travis/LKI/chinese-calendar.svg)](https://travis-ci.org/LKI/chinese-calendar)
-[![License](https://img.shields.io/github/license/LKI/chinese-calendar.svg)](https://github.com/LKI/chinese-calendar/blob/master/LICENSE)
-[![README](https://img.shields.io/badge/README-English-brightgreen.svg)](https://github.com/LKI/chinese-calendar/blob/master/README.en.md)
+[![License](https://img.shields.io/github/license/liriansu-opus/chinese-calendar.svg)](https://github.com/liriansu-opus/chinese-calendar/blob/master/LICENSE)
+[![README](https://img.shields.io/badge/README-English-brightgreen.svg)](https://github.com/liriansu-opus/chinese-calendar/blob/master/README.en.md)
 
 判断某年某月某一天是不是工作日/节假日。
-支持 2004年 至 2025年，包括 2020年 的春节延长。
+支持 2004年 至 2027年，包括 2020年 的春节延长。
 
 ## 安装
 
@@ -54,11 +53,12 @@ assert chinese_calendar.is_in_lieu(datetime.date(2006, 2, 2)) is True
 
 ## 贡献代码
 
-1. Fork + Clone 项目到本地
+1. Fork + Clone 项目到本地，安装 [uv](https://docs.astral.sh/uv/) 后执行 `make install`
 2. 修改[节假日定义][scripts/data.py]
-3. 执行[脚本][scripts/__init__.py]自动生成[常量文件][constants.py]
-4. 提交PR
+3. 执行 `make fmt`，它会调用[脚本][scripts/__init__.py]自动生成[常量文件][constants.py]并格式化代码
+4. 执行 `make test` 确认检查和测试都通过
+5. 提交PR
 
-[constants.py]: https://github.com/LKI/chinese-calendar/blob/master/chinese_calendar/constants.py
-[scripts/data.py]: https://github.com/LKI/chinese-calendar/blob/master/chinese_calendar/scripts/data.py
-[scripts/__init__.py]: https://github.com/LKI/chinese-calendar/blob/master/chinese_calendar/scripts/__init__.py
+[constants.py]: https://github.com/liriansu-opus/chinese-calendar/blob/master/chinese_calendar/constants.py
+[scripts/data.py]: https://github.com/liriansu-opus/chinese-calendar/blob/master/chinese_calendar/scripts/data.py
+[scripts/__init__.py]: https://github.com/liriansu-opus/chinese-calendar/blob/master/chinese_calendar/scripts/__init__.py

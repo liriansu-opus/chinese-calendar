@@ -1,5 +1,24 @@
-## Latest Version 1.10.0
-> on 2025-11-13
+## Unreleased
+
+* **CHORE**: 支持 Python 3.10 ~ 3.15，不再支持已经停止维护的 Python 3.8 和 3.9
+  - 安装包声明 `Requires-Python: >=3.10`，3.8 / 3.9 的用户会停留在 1.12.0
+* **CHORE**: 打包改用 `pyproject.toml`，开发环境从 pipenv 换成 uv
+  - wheel 标签由 `py2.py3` 改为 `py3`，并附带 LICENSE 文件
+
+## Latest Version 1.12.0
+> on 2026-11-05
+
+* **FEAT**: 支持 2027年 的节假日
+  - 依据国务院公告，见 `https://www.gov.cn/zhengce/zhengceku/202611/content_7085102.htm`
+
+## Version 1.11.0
+> on 2025-11-04
+
+* **FEAT**: 支持 2026年 的节假日
+  - 依据国务院公告，见 `https://www.gov.cn/zhengce/content/202511/content_7047090.htm`
+
+## Version 1.10.0
+> on 2024-11-13
 
 * **FEAT**: 支持 2025年 的节假日
 
