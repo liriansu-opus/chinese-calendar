@@ -30,8 +30,3 @@ class InLieuTests(unittest.TestCase):
     def test_in_lieu_should_be_weekday(self):
         for in_lieu_day in chinese_calendar.in_lieu_days.keys():
             self.assertLess(in_lieu_day.weekday(), 5, str(in_lieu_day))
-
-
-
-if __name__ == '__main__':
-    unittest.main()

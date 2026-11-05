@@ -29,7 +29,3 @@ class HolidayAmountTests(unittest.TestCase):
                 expected_holidays = 13
             self.assertEqual(expected_holidays, holiday_amounts[year], "Holiday amount of year {}".format(year))
         self.assertEqual(1, 1)
-
-
-if __name__ == '__main__':
-    unittest.main()

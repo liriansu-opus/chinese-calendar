@@ -50,6 +50,3 @@ class HelperTests(unittest.TestCase):
         cases = [[chinese_calendar.find_workday(i, date) for i in range(-7, 7)] for date in dates]
         for i in range(len(cases) - 1):
             self.assertListEqual(cases[i], cases[i + 1])
-
-if __name__ == '__main__':
-    unittest.main()
