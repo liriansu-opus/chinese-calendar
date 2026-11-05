@@ -6,7 +6,7 @@ install:
 fmt:
 	PYTHONPATH=$$(pwd) python chinese_calendar/scripts/__init__.py
 	pipenv run isort .
-	pipenv run black -l 120 .
+	pipenv run black .
 
 .PHONY: test
 test:
