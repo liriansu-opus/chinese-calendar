@@ -1,5 +1,6 @@
 ## Unreleased
 
+* **FEAT**: `get_holiday_detail` 新增 `in_english` 参数，传 `in_english=False` 可获取中文节日名，thanks @xjackzenvey
 * **CHORE**: 支持 Python 3.10 ~ 3.15，不再支持已经停止维护的 Python 3.8 和 3.9
   - 安装包声明 `Requires-Python: >=3.10`，3.8 / 3.9 的用户会停留在 1.12.0
 * **CHORE**: 打包改用 `pyproject.toml`，开发环境从 pipenv 换成 uv

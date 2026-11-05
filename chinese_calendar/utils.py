@@ -3,7 +3,7 @@ from __future__ import absolute_import, unicode_literals
 
 import datetime
 
-from chinese_calendar.constants import holidays, in_lieu_days, workdays
+from chinese_calendar.constants import Holiday, holidays, in_lieu_days, workdays
 from chinese_calendar.solar_terms import (
     SOLAR_TERMS_C_NUMS,
     SOLAR_TERMS_DELTA,
@@ -82,22 +82,25 @@ def is_in_lieu(date):
     return date in in_lieu_days
 
 
-def get_holiday_detail(date):
+def get_holiday_detail(date, in_english=True):
     """
     check if one date is holiday in China,
     and return the holiday name (None if it's a normal day)
 
     :type date: datetime.date | datetime.datetime
+    :param in_english: return the English holiday name if True, otherwise the Chinese one
+    :type in_english: bool
     :return: holiday bool indicator, and holiday name if it's holiday related day
     :rtype: (bool, str | None)
     """
     date = _validate_date(date)
     if date in workdays.keys():
-        return False, workdays[date]
+        on_holiday, name = False, workdays[date]
     elif date in holidays.keys():
-        return True, holidays[date]
+        on_holiday, name = True, holidays[date]
     else:
         return date.weekday() > 4, None
+    return on_holiday, name if in_english else Holiday(name).chinese
 
 
 def get_dates(start, end):
