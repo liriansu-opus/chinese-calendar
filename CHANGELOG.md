@@ -1,3 +1,10 @@
+## Unreleased
+
+* **CHORE**: 支持 Python 3.10 ~ 3.15，不再支持已经停止维护的 Python 3.8 和 3.9
+  - 安装包声明 `Requires-Python: >=3.10`，3.8 / 3.9 的用户会停留在 1.12.0
+* **CHORE**: 打包改用 `pyproject.toml`，开发环境从 pipenv 换成 uv
+  - wheel 标签由 `py2.py3` 改为 `py3`，并附带 LICENSE 文件
+
 ## Latest Version 1.12.0
 > on 2026-11-05
 
