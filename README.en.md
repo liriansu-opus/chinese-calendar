@@ -6,7 +6,7 @@
 [![README](https://img.shields.io/badge/简介-中文-brightgreen.svg)](https://github.com/liriansu-opus/chinese-calendar/blob/master/README.md)
 
 Check if some date is workday or holiday in China.
-Support 2004 ~ 2026.
+Support 2004 ~ 2027.
 
 ## Installation
 
