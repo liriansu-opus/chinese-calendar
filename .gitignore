@@ -11,3 +11,9 @@ MANIFEST
 /env/
 
 *.egg-info/
+/.venv/
+/.pytest_cache/
+__pycache__/
+
+# uv.lock must be committed, even if a global gitignore excludes it
+!/uv.lock

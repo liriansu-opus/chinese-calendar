@@ -1,24 +1,25 @@
 .PHONY: install
 install:
-	pipenv sync --dev
+	uv sync --locked
 
 .PHONY: fmt
 fmt:
-	PYTHONPATH=$$(pwd) python chinese_calendar/scripts/__init__.py
-	pipenv run isort .
-	pipenv run black .
+	uv run python chinese_calendar/scripts/__init__.py
+	uv run isort .
+	uv run black .
 
-.PHONY: test
-test:
-	pipenv run flake8
-	pipenv run isort --check .
-	pipenv run black --check -l 120 .
-	$(Make) pytest
+.PHONY: lint
+lint:
+	uv run flake8
+	uv run isort --check .
+	uv run black --check .
 
 .PHONY: pytest
 pytest:
-	pipenv run pytest
+	uv run pytest
 
+.PHONY: test
+test: lint pytest
 
 .PHONY: release
 release:
